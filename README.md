@@ -7,7 +7,7 @@ CRST is built on a CLIP-style dual encoder and addresses two cross-resolution fa
 ## Framework
 
 <p align="center">
-  <img src="figs/crst_framework.png" width="900">
+  <img src="figs/overall-framework.png" width="900">
 </p>
 
 CRST contains three training-time components:
