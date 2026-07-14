@@ -200,10 +200,10 @@ train.py                # training entry
 If you use this code, please cite the CRST paper.
 
 ```bibtex
-@inproceedings{qian2026crst,
+@article{qian2026cross,
   title={Cross-Resolution Semantic Transfer for Robust Text-to-Image Retrieval in Low-Resolution Surveillance},
   author={Qian, Wenjie and Yang, Bin and Wang, Xiao and Huang, Wenke and Mei, Ling and Xu, Xin and Ye, Mang},
-  booktitle={Proceedings of the ACM International Conference on Multimedia},
+  journal={arXiv preprint arXiv:2606.30458},
   year={2026}
 }
 ```
