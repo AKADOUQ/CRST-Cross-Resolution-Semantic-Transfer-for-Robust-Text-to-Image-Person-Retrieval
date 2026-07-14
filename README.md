@@ -32,28 +32,6 @@ The CLIP BPE vocabulary file is required by `utils/simple_tokenizer.py`. If `dat
 data/bpe_simple_vocab_16e6.txt.gz
 ```
 
-## Dataset Preparation
-
-Organize datasets under one root directory:
-
-```text
-<root_dir>/
-├── CUHK-PEDES/
-│   ├── imgs/
-│   ├── imgs_MildLR/
-│   ├── imgs_MidLR/
-│   ├── imgs_UltraLR/
-│   ├── imgs_Multi/
-│   ├── imgs_Multi_mapping.txt
-│   └── reid_raw.json
-├── ICFG-PEDES/
-│   ├── imgs/
-│   └── ICFG-PEDES.json
-└── RSTPReid/
-    ├── imgs/
-    └── data_captions.json
-```
-
 ## Training
 
 ### CUHK-PEDES
@@ -81,27 +59,19 @@ LOG=logs/CUHK-PEDES/your_trained_run
 ### HR
 
 ```bash
-python test.py \
-  --config_file "$LOG/configs.yaml" \
-  --test_res_label 0
+python test.py --config_file "$LOG/configs.yaml" --test_res_label 0
 ```
 
 ### Ultra-LR
 
 ```bash
-python test.py \
-  --config_file "$LOG/configs.yaml" \
-  --test_img_root /path/to/datasets/CUHK-PEDES/imgs_UltraLR \
-  --test_res_label 3
+python test.py --config_file "$LOG/configs.yaml" --test_img_root /path/to/datasets/CUHK-PEDES/imgs_UltraLR --test_res_label 3
 ```
 
 ### Mixed
 
 ```bash
-python test.py \
-  --config_file "$LOG/configs.yaml" \
-  --test_img_root /path/to/datasets/CUHK-PEDES/imgs_Multi \
-  --test_res_label 4
+python test.py --config_file "$LOG/configs.yaml" --test_img_root /path/to/datasets/CUHK-PEDES/imgs_Multi --test_res_label 4
 ```
 
 For `--test_res_label 4`, the code loads the corresponding `imgs_Multi_mapping.txt` file and assigns each gallery image its own resolution label.
