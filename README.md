@@ -50,28 +50,22 @@ During training, the HR branch is used as the high-fidelity reference, while the
 
 ## Evaluation
 
-Set the trained log directory first:
-
-```bash
-LOG=logs/CUHK-PEDES/your_trained_run
-```
-
 ### HR
 
 ```bash
-python test.py --config_file "$LOG/configs.yaml" --test_res_label 0
+python test.py --config_file "./logs/CUHK-PEDES/your_trained_run/configs.yaml" --test_res_label 0
 ```
 
 ### Ultra-LR
 
 ```bash
-python test.py --config_file "$LOG/configs.yaml" --test_img_root /path/to/datasets/CUHK-PEDES/imgs_UltraLR --test_res_label 3
+python test.py --config_file "./logs/CUHK-PEDES/your_trained_run/configs.yaml" --test_img_root /root/datasets/CUHK-PEDES/imgs_UltraLR --test_res_label 3
 ```
 
 ### Mixed
 
 ```bash
-python test.py --config_file "$LOG/configs.yaml" --test_img_root /path/to/datasets/CUHK-PEDES/imgs_Multi --test_res_label 4
+python test.py --config_file "./logs/CUHK-PEDES/your_trained_run/configs.yaml" --test_img_root /root/datasets/CUHK-PEDES/imgs_Multi --test_res_label 4
 ```
 
 For `--test_res_label 4`, the code loads the corresponding `imgs_Multi_mapping.txt` file and assigns each gallery image its own resolution label.
