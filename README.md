@@ -59,34 +59,39 @@ data/bpe_simple_vocab_16e6.txt.gz
 ### CUHK-PEDES
 
 ```bash
-python train.py --name crst_cuhk --img_aug --batch_size 64 --MLM --loss_names 'sdm+mlm+id' --dataset_name 'CUHK-PEDES' --root_dir '/path/to/datasets' --num_epoch 60 --paired_loss_weight 1.0 --feat_loss_weight 0.1 --cr_rda_loss_weight 0.1
+python train.py --name crst_cuhk --img_aug --batch_size 64 --MLM --loss_names 'sdm+mlm+id' --dataset_name 'CUHK-PEDES' --root_dir '/root/datasets' --num_epoch 60 --paired_loss_weight 1.0 --feat_loss_weight 0.1 --cr_rda_loss_weight 0.1
 ```
 
 ### ICFG-PEDES
 
 ```bash
-python train.py --name crst_icfg --img_aug --batch_size 64 --MLM --loss_names 'sdm+mlm+id' --dataset_name 'ICFG-PEDES' --root_dir '/path/to/datasets' --num_epoch 60 --paired_loss_weight 1.0 --feat_loss_weight 0.1 --cr_rda_loss_weight 0.1
+python train.py --name crst_icfg --img_aug --batch_size 64 --MLM --loss_names 'sdm+mlm+id' --dataset_name 'ICFG-PEDES' --root_dir '/root/datasets' --num_epoch 60 --paired_loss_weight 1.0 --feat_loss_weight 0.1 --cr_rda_loss_weight 0.1
 ```
 
+### RSTPReid
+
+```bash
+python train.py --name crst_rstp --img_aug --batch_size 64 --MLM --loss_names 'sdm+mlm+id' --dataset_name 'RSTPReid' --root_dir '/root/datasets' --num_epoch 60 --paired_loss_weight 1.0 --feat_loss_weight 0.1 --cr_rda_loss_weight 0.1
+```
 
 ## Evaluation
 
 ### HR
 
 ```bash
-python test.py --config_file "./logs/CUHK-PEDES/your_trained_run/configs.yaml" --test_res_label 0
+python test.py --config_file "./logs/CUHK-PEDES/trained_run/configs.yaml" --test_res_label 0
 ```
 
 ### Ultra-LR
 
 ```bash
-python test.py --config_file "./logs/CUHK-PEDES/your_trained_run/configs.yaml" --test_img_root /root/datasets/CUHK-PEDES/imgs_UltraLR --test_res_label 3
+python test.py --config_file "./logs/CUHK-PEDES/trained_run/configs.yaml" --test_img_root /root/datasets/CUHK-PEDES/imgs_UltraLR --test_res_label 3
 ```
 
 ### Mixed
 
 ```bash
-python test.py --config_file "./logs/CUHK-PEDES/your_trained_run/configs.yaml" --test_img_root /root/datasets/CUHK-PEDES/imgs_Multi --test_res_label 4
+python test.py --config_file "./logs/CUHK-PEDES/trained_run/configs.yaml" --test_img_root /root/datasets/CUHK-PEDES/imgs_Multi --test_res_label 4
 ```
 
 For `--test_res_label 4`, the code loads the corresponding `imgs_Multi_mapping.txt` file and assigns each gallery image its own resolution label.
