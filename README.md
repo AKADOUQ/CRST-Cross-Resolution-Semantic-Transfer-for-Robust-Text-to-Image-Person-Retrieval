@@ -1,8 +1,36 @@
-# CRST: Cross-Resolution Semantic Transfer for Robust Text-to-Image Person Retrieval
+# <div align="center">CRST: Cross-Resolution Semantic Transfer<br>for Robust Text-to-Image Person Retrieval</div>
 
-This repository contains the PyTorch implementation of **Cross-Resolution Semantic Transfer (CRST)** for robust text-to-image person retrieval under low-resolution and mixed-resolution surveillance scenarios.
+<div align="center">
 
-CRST is built on a CLIP-style dual encoder and addresses two cross-resolution failure modes: **Evidence Reliability Collapse (ERC)**, where low-resolution images corrupt fine-grained visual evidence for language grounding, and **Ranking Distribution Drift (RDD)**, where mixed HR/LR galleries reshape similarity neighborhoods and destabilize retrieval rankings.
+🔥🔥 CRST is accepted by ACM MM 2026! 🔥🔥
+
+<a href="#">
+  <img src="https://img.shields.io/badge/arXiv-Coming%20Soon-b31b1b.svg" alt="arXiv">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/Code-CRST-blue.svg" alt="Code">
+</a>
+<a href="#">
+  <img src="https://img.shields.io/badge/Datasets-CUHK--PEDES%20%7C%20ICFG--PEDES%20%7C%20RSTPReid-yellow.svg" alt="Datasets">
+</a>
+
+</div>
+
+> **Important Note:** This repository is the official PyTorch implementation of **Cross-Resolution Semantic Transfer (CRST)**.  
+> CRST is designed for robust text-to-image person retrieval under low-resolution and mixed-resolution surveillance scenarios.
+
+---
+
+## Introduction
+
+🌟 **Cross-resolution text-to-image person retrieval**
+
+CRST studies a practical surveillance setting where high-resolution and low-resolution pedestrian images coexist in the same gallery. This setting introduces two key challenges:
+
+- **Evidence Reliability Collapse:** low-resolution images corrupt fine-grained visual evidence required by text descriptions.
+- **Ranking Distribution Drift:** mixed-resolution galleries reshape the retrieval neighborhood and destabilize ranking orders.
+
+To address these challenges, CRST transfers high-resolution semantic evidence to low-resolution retrieval through reliability-aware reasoning, text-guided feature correction, and ranking-distribution alignment.
 
 ## Framework
 
