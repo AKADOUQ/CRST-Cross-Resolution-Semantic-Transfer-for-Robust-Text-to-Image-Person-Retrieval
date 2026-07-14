@@ -5,7 +5,7 @@
 🔥🔥 CRST is accepted by ACM MM 2026! 🔥🔥
 
 <a href="#">
-  <img src="https://arxiv.org/pdf/2606.30458" alt="arXiv">
+  <img src="https://img.shields.io/badge/arXiv-Coming%20Soon-b31b1b.svg" alt="arXiv">
 </a>
 
 </div>
