@@ -68,7 +68,6 @@ python train.py --name crst_cuhk --img_aug --batch_size 64 --MLM --loss_names 's
 python train.py --name crst_icfg --img_aug --batch_size 64 --MLM --loss_names 'sdm+mlm+id' --dataset_name 'ICFG-PEDES' --root_dir '/path/to/datasets' --num_epoch 60 --paired_loss_weight 1.0 --feat_loss_weight 0.1 --cr_rda_loss_weight 0.1
 ```
 
-During training, the HR branch is used as the high-fidelity reference, while the paired branch randomly samples HR/Mild-LR/Mid-LR/Ultra-LR views.
 
 ## Evaluation
 
